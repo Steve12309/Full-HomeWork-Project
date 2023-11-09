@@ -3,33 +3,71 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-size: 18px;
   font-family: "Poppins", sans-serif;
 }
 
-/*Root Style*/
-:root {
-  --color-light: #f3f3f3;
-  --background-color-form: rgba(27, 27, 50, 0.8);
-  --color-green: #37af65;
-  --font-size: 18px;
-  --label-margin: 0px 0px 8px 0px;
-  --padding-square: 6px 12px;
-}
-
-/*General Style*/
 .container {
-  display: flex;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-image: linear-gradient(
-    115deg,
-    rgba(58, 58, 158, 0.8),
-    rgba(136, 136, 206, 0.7)
-  );
+      115deg,
+      rgba(58, 58, 158, 0.8),
+      rgba(136, 136, 206, 0.7)
+    ),
+    url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.main--form-container {
-  background-color: var(--background-color-form);
+.personal-suggestion .form-group label {
+  width: 632px;
+}
+
+/*Other Style*/
+.form-container {
+  background-color: #1b1b32;
+  opacity: 0.9;
+  padding: 40px;
+  border-radius: 4px;
+}
+
+/*Input Style*/
+.container :is(label, h1, p) {
+  color: #f3f3f3;
+}
+
+.form-container :is(#Name, #Email, #Age, #Comment, select, button) {
+  width: 632px;
+}
+
+.form-container :is(input, select, textarea) {
+  padding: 6px 12px;
+  color: #495057;
+}
+
+.form-container textarea {
+  height: 120px;
+}
+
+.form-container :is(.input-checkbox, .input-ratio) {
+  width: 20px;
+  height: 20px;
+  margin: 0px 10px 0px 0px;
+}
+
+.form-group {
+  margin: 0px 0px 20px 0px;
+}
+
+.form-group div {
+  margin: 0px 0px 8px 0px;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
 }
