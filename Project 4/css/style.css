@@ -43,7 +43,7 @@ header {
 }
 
 /*Form Style*/
-.container :is(label, h1, p) {
+.container :where(label, h1, p) {
   color: #f3f3f3;
 }
 
@@ -146,6 +146,7 @@ p {
   user-select: none;
   pointer-events: none;
   transition: 0.25s ease;
+  color: #999;
 }
 
 .form-input {
@@ -160,5 +161,4 @@ p {
   transition: 0.25s ease;
   display: inline-block;
   padding: 0px 20px 0px 20px;
-  color: #999;
 }
