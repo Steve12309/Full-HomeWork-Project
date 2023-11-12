@@ -270,7 +270,7 @@ p {
   position: relative;
 }
 
-/*CSS cho label là con của thẳng cha CSS ở trên với position là relative*/
+/* CSS cho label là con của thẳng cha CSS ở trên với position là relative */
 .form-label {
   position: absolute; /*CSS absolute là mặc định rồi nha. Ví dụ bạn có 1 div và trong div đó có 1 p thì thẳng div là position relative còn thằng con nó là thẻ p position là absolute nha. Position absolute để khi nó được di chuyển trong hoặc ngoài thẳng cha có position là relativ sẽ không ảnh hưởng đến các thằng khác vì khi CSS position absolute thì thẳng được CSS sẽ không còn chiếm không gian trong trang website nữa á! Position quan trọng nha mọi người nên tìm hiểu về nó*/
   top: 35%; /*Cho nó di chuyển cách top của thẳng cha position relative là 35% nha. Tất là từ top của thẳng cha xuống vị trí của thẳng label là con của thẳng cha sẽ là 35%*/
