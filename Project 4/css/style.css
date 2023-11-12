@@ -7,6 +7,7 @@
   font-family: "Poppins", sans-serif;
 }
 
+/*General Style*/
 .container {
   display: flex;
   flex-direction: column;
@@ -23,30 +24,45 @@
   background-position: center;
 }
 
-.personal-suggestion .form-group label {
-  width: 632px;
-}
-
-/*Other Style*/
 .form-container {
   background-color: #1b1b32;
   opacity: 0.9;
   padding: 40px;
   border-radius: 4px;
+  width: 100%;
+  height: auto;
 }
 
-/*Input Style*/
+main {
+  width: 50%;
+}
+
+header {
+  width: 100%;
+  height: auto;
+}
+
+/*Form Style*/
 .container :is(label, h1, p) {
   color: #f3f3f3;
 }
 
-.form-container :is(#Name, #Email, #Age, #Comment, select, button) {
-  width: 632px;
+.form-container :is(#Name, #Email, #Age, select) {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.form-container :is(#Name, #Email, #Age, select):focus {
+  border-color: #80bdff;
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
 .form-container :is(input, select, textarea) {
   padding: 6px 12px;
   color: #495057;
+  text-align: left;
+  border: 1px solid #ced4da;
 }
 
 .form-container textarea {
@@ -70,4 +86,79 @@
 .form-group label {
   display: flex;
   align-items: center;
+}
+
+/*Button Style*/
+
+.button {
+  height: 47px;
+  background-color: #37af65;
+  cursor: pointer;
+  padding: 6px 12px;
+  text-align: center;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+/*Head Style*/
+.head-container {
+  margin: 60px 0px 30px 0px;
+  padding: 0px 10px 0px 10px;
+  width: 100%;
+  height: 100%;
+  line-height: 1.4;
+  font-weight: 200px;
+}
+
+h1 {
+  text-align: center;
+  margin: 0px 0px 8px 0px;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+p {
+  text-align: center;
+  margin: 0px 0px 8px 0px;
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 1.3px;
+}
+
+/*Comment Style*/
+#Comment {
+  width: 100%;
+}
+
+/*Input Focus Style*/
+.form-focus {
+  position: relative;
+  width: 100%;
+}
+
+.form-label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 14px;
+  user-select: none;
+  pointer-events: none;
+  transition: 0.25s ease;
+}
+
+.form-input {
+  background-color: #1b1b32;
+  transition: 0.25s ease;
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  top: 0;
+  background-color: #1b1b32;
+  transition: 0.25s ease;
+  display: inline-block;
+  padding: 0px 20px 0px 20px;
+  color: #999;
 }
