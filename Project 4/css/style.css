@@ -89,8 +89,9 @@ header {
 }
 
 /*Button Style*/
+/*CSS của button á mọi người*/
 .button {
-  cursor: pointer;
+  cursor: pointer; /*Kiểu là để khi di chuyển chuyển vào button nó sẽ có hiệu ứng trỏ á giống mình di chuyển chuột vào mấy cái link thì con chuyển thành cái bàn tay có 1 ngón tay trỏ lên á*/
   padding: 6px 12px;
   text-align: center;
   width: 100%;
@@ -98,10 +99,10 @@ header {
   font-size: 20px;
   background-color: transparent;
   border: none;
-  outline: none;
+  outline: none; /*Cái này cũng giống border đặt giá trị là none để nó biến mất không hiện lên á là không còn outline nữa*/
   color: white;
-  font-weight: 900px;
-  position: relative;
+  font-weight: 900px; /*Này là độ đậm hay độ dày của chữ á max là 900 min là 100 nha*/
+  position: relative; /*Position là để di chuyển nó trong trang web á di chuyển đi đâu cũng được, ở đây cái button là thằng cho thì mặc định phải set là position relative còn mấy thẻ span ở dưới đều là phần tử con nên set là positon absolute để di chuyển trong hoặc ngoài thằng cha đây là mặc định rồi nha. Mọi người nên tìm hiểu về position rất hay và cần thiết nhe!*/
   background-color: #1b1b32;
 }
 
@@ -145,41 +146,6 @@ header {
   background-color: white;
 }
 
-.button:hover span:nth-child(1) {
-  width: 100%;
-}
-.button:hover span:nth-child(2) {
-  height: 100%;
-}
-.button:hover span:nth-child(3) {
-  width: 100%;
-}
-.button:hover span:nth-child(4) {
-  height: 100%;
-}
-
-.button:hover span:nth-child(5) {
-  height: 100%;
-}
-
-.button:hover span:nth-child(6) {
-  width: 100%;
-}
-
-.button:hover span:nth-child(9) {
-  width: 100%;
-  z-index: 1;
-  opacity: 0.8;
-}
-
-.button:hover span:nth-child(7) {
-  height: 100%;
-}
-
-.button:hover span:nth-child(8) {
-  width: 100%;
-}
-
 .button span:nth-child(5) {
   position: absolute;
   bottom: 0;
@@ -188,18 +154,6 @@ header {
   height: 0;
   transition: height 0.2s linear 0.3s;
   background-color: white;
-}
-
-.button span:nth-child(9) {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 2px;
-  height: 100%;
-  z-index: -1;
-  transition: width 0.2s linear 0.3s, z-index 0.2s linear 0.3s,
-    opacity 0.2s linear 0.3s;
-  background-color: green;
 }
 
 .button span:nth-child(6) {
@@ -232,7 +186,54 @@ header {
   background-color: white;
 }
 
-/*Head Style*/
+.button span:nth-child(9) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  z-index: -1;
+  transition: width 0.2s linear 0.3s, z-index 0.2s linear 0.3s,
+    opacity 0.2s linear 0.3s;
+  background-color: #4cd137;
+}
+
+.button:hover span:nth-child(1) {
+  width: 100%;
+}
+.button:hover span:nth-child(2) {
+  height: 100%;
+}
+.button:hover span:nth-child(3) {
+  width: 100%;
+}
+.button:hover span:nth-child(4) {
+  height: 100%;
+}
+
+.button:hover span:nth-child(5) {
+  height: 100%;
+}
+
+.button:hover span:nth-child(6) {
+  width: 100%;
+}
+
+.button:hover span:nth-child(7) {
+  height: 100%;
+}
+
+.button:hover span:nth-child(8) {
+  width: 100%;
+}
+
+.button:hover span:nth-child(9) {
+  width: 100%;
+  z-index: 1;
+  opacity: 0.8;
+}
+
+/*Header Style*/
 .head-container {
   margin: 60px 0px 30px 0px;
   padding: 0px 10px 0px 10px;
@@ -264,32 +265,38 @@ p {
 }
 
 /*Input Focus Style*/
+/*CSS position relative cho thẳng cha của label và input*/
 .form-focus {
   position: relative;
 }
 
+/*CSS cho label là con của thẳng cha CSS ở trên với position là relative*/
 .form-label {
-  position: absolute;
-  top: 35%;
-  transform: translateY(-50%);
-  left: 14px;
-  user-select: none;
-  pointer-events: none;
-  transition: 0.25s ease;
-  color: #999;
+  position: absolute; /*CSS absolute là mặc định rồi nha. Ví dụ bạn có 1 div và trong div đó có 1 p thì thẳng div là position relative còn thằng con nó là thẻ p position là absolute nha. Position absolute để khi nó được di chuyển trong hoặc ngoài thẳng cha có position là relativ sẽ không ảnh hưởng đến các thằng khác vì khi CSS position absolute thì thẳng được CSS sẽ không còn chiếm không gian trong trang website nữa á! Position quan trọng nha mọi người nên tìm hiểu về nó*/
+  top: 35%; /*Cho nó di chuyển cách top của thẳng cha position relative là 35% nha. Tất là từ top của thẳng cha xuống vị trí của thẳng label là con của thẳng cha sẽ là 35%*/
+  transform: translateY(
+    -50%
+  ); /*Cái này kiểu đễ căn giữa thằng label với thẻ input hoi nha*/
+  left: 14px; /*Tương tự như top á là sẽ cách lề trái của thẳng cha 14px*/
+  user-select: none; /*Cái này là để người dùng không bôi đen được cái label á*/
+  pointer-events: none; /*Cái này là để ẩn cái label đi người ta có thể nhấn vào label để kích hoạt cái input là focus cái input á nếu không để cái này thì khi bấm vào label thì cái input không bị focus do cái label mình CSS cho nó nằm trong input chiếm 1 vị trí nhất định á. Cái này để làm ẩn vị trí đó đi để có thể nhấn vào vị trí đó được*/
+  transition: 0.25s ease; /*Cho cái label di chuyển mượt hoi nha*/
+  color: #999; /*Set màu cho cái label nhe*/
 }
 
 .form-input {
-  background-color: #1b1b32;
-  transition: 0.25s ease;
-  margin: 0px 0px 10px 0px;
+  background-color: #1b1b32; /*Set màu background cho cái input nhe*/
+  transition: 0.25s ease; /*Cho cái mấy cái hiệu ứng của input nó mượt á ở đây là focus với pseudo :focus á mấy cái*/
+  margin: 0px 0px 10px 0px; /*Cái này căn lề hoi nha theo tự là chiều kim đồng hồ á 0px là ở lề trên 0px tiếp theo là lề phải 10px là lề dưới 0px cuối là lề trái*/
 }
 
+/*CSS hiệu ứng của label khi người dùng nhấn vào input nha*/
 .form-input:focus + .form-label,
 .form-input:not(:placeholder-shown) + .form-label {
-  top: -8px;
-  background-color: #1b1b32;
-  transition: 0.25s ease;
-  display: inline-block;
-  padding: 0px 20px 0px 20px;
+  /*Cái :placeholder-shown có nghĩa là khi input được focus là người dùng có nhập gì vào ví dụ abc thì cái not placeholder sẽ đúng do lúc đó placeholder bị mất và trở thành những gì người dùng nhập ở đây là abc thì label sẽ thực hiện code CSS ở dưới nha. Idea là để cho khi hết focus input thì placeholder mất thì cái chỗ :not() nó đúng thì label không di chuyển lại ví trí ban đầu mà vẫn ở top -8px á nếu không làm thế khi bỏ focus label sẽ về vị trí ban đầu là top 50% như code ở trên á*/
+  top: -8px; /*Tương tự mấy cái mình giải thíc ở trên á là nó sẽ di chuyển lên vị trí cách top -8px là sẽ vượt ra ngoài cái thẳng cha luôn vẫn được nha đó là cái hay của position á. Và nó sẽ di chuyển khi input được focus do mình code là form-input:focus + form-label là khi input focus thì label sẽ thực hiện những CSS code ở dưới đây*/
+  background-color: #1b1b32; /*Set background cho label hoi nha*/
+  transition: 0.25s ease; /*Làm cho chuyển động của label mượt hơn hoi nha*/
+  display: inline-block; /*Làm thế để*/
+  padding: 0px 20px 0px 20px; /*Cái này căn đệm cho element hoi nha theo tự là chiều kim đồng hồ á 0px là ở đệm trên 20px tiếp theo là đệm phải 0px là đệm dưới 0px cuối là đệm trái*/
 }
