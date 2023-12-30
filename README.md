@@ -8,4 +8,4 @@ Lần lượt các web tương ứng với project
 4. Project 4: Survey Form Web (Upgraded)
 5. Project 5: Tribute Web
 6. Project 6: Nutrition Web
-7. Project 7: Scissors-Rock-Paper Game(IN PROGRESS)
+7. Project 7: Scissors-Rock-Paper Game(IN PROGRESS).
