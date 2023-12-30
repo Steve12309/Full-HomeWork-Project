@@ -204,11 +204,12 @@ body {
   color: white;
 }
 
+/*Icon Style*/
 i {
   cursor: pointer;
 }
 
-.icon-span {
+.setting-table-container {
   display: none;
   position: absolute;
   width: 50%;
@@ -223,7 +224,9 @@ i {
 .close {
   position: absolute;
   right: 0;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  margin-top: 5px;
+  margin-right: 5px;
 }
 
 .close-container {
@@ -233,7 +236,7 @@ i {
   position: relative;
 }
 
-.demo {
+.setting-table-main-container {
   display: none;
   position: absolute;
   width: 100%;
@@ -242,14 +245,7 @@ i {
   z-index: 99;
 }
 
-.one {
-  text-align: center;
-  font-size: 5rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  color: #dff9fb;
-}
-
+/*Icon Effect*/
 .fa-gear:hover {
   animation: spin 0.25s linear forwards;
 }
@@ -258,6 +254,11 @@ i {
   animation: spin2 0.25s linear forwards;
 }
 
+.fa-xmark:hover {
+  color: white;
+}
+
+/*Icon Animation*/
 @keyframes spin {
   to {
     rotate: 360deg;
@@ -276,6 +277,7 @@ i {
   }
 }
 
+/*Music-mode Style*/
 .change-group {
   font-size: 2rem;
 }

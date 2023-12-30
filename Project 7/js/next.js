@@ -1,33 +1,3 @@
-var countSeconds = "0" + 0;
-var countMinuteds = "0" + 0;
-
-function Count() {
-  setTimeout(function goUp() {
-    countSeconds++;
-    if (countSeconds == 60) {
-      countSeconds = 0;
-    }
-    if (countSeconds < 10) {
-      countSeconds = "0" + countSeconds;
-    }
-  }, 1000);
-  setTimeout(function () {
-    if (countSeconds == 59) {
-      countMinuteds++;
-      countMinuteds = "0" + countMinuteds;
-    }
-    if (countMinuteds == 90) {
-      countSeconds = "0" + 0;
-      countMinuteds = "0" + 0;
-      alert("Stop play or you will die by the author of this game");
-    }
-  }, 1000);
-  document.getElementById("timeSecond-played").innerHTML = countSeconds;
-  document.getElementById("timeMinute-played").innerHTML = countMinuteds + ":";
-  setTimeout("Count()", 1000);
-}
-Count();
-
 var playerScissor = document.getElementById("Player-Scissors");
 var playerRock = document.getElementById("Player-Rock");
 var playerPaper = document.getElementById("Player-Paper");
@@ -44,7 +14,42 @@ var robotThirdChoice = document.querySelector(".special13");
 var choiceRobotArea = document.querySelector(".robot-choices");
 var loadingAnimation = document.querySelector(".loading");
 var hello = document.querySelector(".player-choices");
+var home = document.querySelector(".fa-house");
 loadingAnimation.classList.add("display");
+
+var countSeconds = "0" + 0;
+var countMinuteds = "0" + 0;
+
+home.onclick = function () {
+  window.location = "../html/index.html";
+};
+
+function Count() {
+  setTimeout(function goUp() {
+    countSeconds++;
+    if (countSeconds == 60) {
+      countSeconds = 0;
+    }
+    if (countSeconds < 10) {
+      countSeconds = "0" + countSeconds;
+    }
+  }, 1000);
+  setTimeout(function () {
+    if (countSeconds == 59) {
+      countMinuteds++;
+      countMinuteds = "0" + countMinuteds;
+    }
+    if (countMinuteds == 5) {
+      countSeconds = "0" + 0;
+      countMinuteds = "0" + 0;
+      alert("Stop play or you will die by the author of this game");
+    }
+  }, 1000);
+  document.getElementById("timeSecond-played").innerHTML = countSeconds;
+  document.getElementById("timeMinute-played").innerHTML = countMinuteds + ":";
+  setTimeout("Count()", 1000);
+}
+Count();
 
 playerPaper.addEventListener("click", function () {
   playerChoice.className = "fa-solid fa-hand change";

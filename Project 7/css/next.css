@@ -4,12 +4,14 @@
   box-sizing: border-box;
 }
 
+/*General Style*/
 body {
   background-color: #252839;
   min-height: 90vh;
   max-height: 100vh;
 }
 
+/*Score Style*/
 .score-container {
   display: flex;
   display: flex;
@@ -22,6 +24,7 @@ body {
   margin-top: 10px;
 }
 
+/*Playarea Style*/
 .playarea-container {
   width: 100%;
   height: auto;
@@ -32,11 +35,25 @@ body {
   justify-content: space-between;
 }
 
+/*Image Style*/
 .player-img img {
   width: 200px;
   height: 200px;
   margin-left: 10px;
   border-radius: 50px;
+}
+
+.player-choices img:hover {
+  background-color: blue;
+}
+
+/*Choicearea Style*/
+.choicearea {
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .player-choicearea {
@@ -54,6 +71,23 @@ body {
   margin-right: 30px;
 }
 
+.player-choicearea {
+  font-size: 5rem;
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.robot-choicearea {
+  font-size: 5rem;
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Element Style*/
 .player {
   display: flex;
   margin-top: 10px;
@@ -64,14 +98,7 @@ body {
   margin-top: 10px;
 }
 
-.choicearea {
-  display: flex;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-between;
-}
-
+/*Element-Choices Style*/
 .player-choices {
   display: flex;
   gap: 10px;
@@ -85,6 +112,7 @@ body {
   position: relative;
 }
 
+/*Special Effect Style*/
 .special {
   font-size: 3rem;
   padding: 50px;
@@ -94,21 +122,23 @@ body {
   transition: all 0.25s linear;
 }
 
-.special:hover {
-  background-color: blue;
-  scale: 0.9;
-}
-
 .special1 {
   font-size: 5rem;
   padding: 50px;
   margin-top: 30px;
 }
 
-.player-choices img:hover {
+/*Special Effect Style*/
+.special:hover {
   background-color: blue;
+  scale: 0.9;
 }
 
+.special11 {
+  animation: scale1 1s 0.5s linear infinite alternate;
+}
+
+/*Time Style*/
 .time {
   font-size: 4rem;
   color: white;
@@ -122,6 +152,7 @@ body {
   align-items: center;
   flex-direction: column;
 }
+
 .time-played {
   display: block;
   position: relative;
@@ -141,32 +172,14 @@ body {
   outline: none;
 }
 
-.player-choicearea {
-  font-size: 5rem;
-  display: flex;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.robot-choicearea {
-  font-size: 5rem;
-  display: flex;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
+/*Result Style*/
 .result {
   font-size: 3rem;
   color: white;
   text-transform: uppercase;
 }
 
-.special11 {
-  animation: scale1 1s 0.5s linear infinite alternate;
-}
-
+/*Special Animation*/
 @keyframes scale1 {
   0% {
     scale: 1;
@@ -201,10 +214,8 @@ body {
     scale: 0;
   }
 }
-.display {
-  display: none;
-}
 
+/*Loading Effect Style*/
 .loading {
   width: 8rem;
   position: absolute;
@@ -236,12 +247,36 @@ body {
   animation-delay: calc(var(--value) * 0.125s);
 }
 
+/*Loading Animation*/
 @keyframes loading {
   to {
     transform: scale(0);
   }
 }
 
+/*Hidden Effect Style*/
 .display2 {
   visibility: hidden;
+}
+
+.display {
+  display: none;
+}
+
+/*Icon Style*/
+.icon-container {
+  color: white;
+  position: relative;
+  font-size: 2rem;
+}
+
+.fa-house {
+  position: absolute;
+  right: 0;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.fa-house:hover {
+  color: black;
 }
