@@ -27,9 +27,11 @@ window.onload = function () {
   if (mode == "on") {
     var x = document.querySelector('input[value="On"]');
     x.setAttribute("checked", "");
+    audioElement.play();
   } else {
     var y = document.querySelector('input[value="Off"]');
     y.setAttribute("checked", "");
+    audioElement.pause();
   }
 };
 
